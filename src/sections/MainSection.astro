@@ -1,0 +1,27 @@
+---
+import {TAGS} from '../content/superHeroes.js'
+---
+
+
+
+<section class="relative my-8">
+    <img src="https://placehold.co/860x420" alt="main image" class="w-full h-auto rounded-xl" />
+    <div class="absolute left-10 right-0 -bottom-10">
+        <div
+            class="block max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow-lg"
+        >
+        {Object.values(TAGS).map((tag) => (  // Use Object.values to get an array of tag objects
+          <span 
+            class={`${tag.class} text-sm font-medium me-2 px-2.5 py-0.5 rounded`}>
+            {tag.name}
+          </span>
+        ))}
+
+            <h5
+                class="mb-2 text-3xl font-bold tracking-tight text-gray-900"
+            >
+                InfoHeroes Blog
+            </h5>
+        </div>
+    </div>
+</section>
