@@ -16,10 +16,11 @@ let heroe = superheroes.sort()
         </a>
         <div class="p-3">
             {hero.comic.map((tag) => (
-                <span 
-            class={`${tag.class} text-sm font-medium me-2 px-2.5 py-0.5 rounded`}>
-            {tag.name}
-          </span>
+        //         <span 
+        //     class={`${tag.class} text-sm font-medium me-2 px-2.5 py-0.5 rounded`}>
+        //     {tag.name}
+        //   </span>
+                <img src={tag.logo} alt={tag.name} class={tag.class}/>
             ))}
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{hero.name}</h5>

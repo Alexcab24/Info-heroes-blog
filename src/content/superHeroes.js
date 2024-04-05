@@ -1,11 +1,16 @@
+
+
+
 export const TAGS = {
     MARVEL: {
       name: "Marvel",
-      class: "bg-marvel text-white"
+      logo: '/Marvel.svg',
+      class: "-mb-5 -mt-10"
     },
     DC: {
       name: "DC",
-      class: "bg-dc text-white"
+      logo: '/DC.svg',
+      class: "-mt-4"
     },
   };
 
