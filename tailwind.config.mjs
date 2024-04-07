@@ -4,9 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'background-header': '#000033',
+				'background-header': '#2874A6',
 				'marvel': '#ec1d24',
-				'dc': '#004488'
+				'dc': '#004488',
+				'hover': '#2874A6 '
 			}
 			
 		},

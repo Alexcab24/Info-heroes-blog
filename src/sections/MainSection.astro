@@ -1,30 +1,33 @@
 ---
-import {TAGS} from '../content/superHeroes.js'
+import { TAGS } from "../content/superHeroes.js";
 ---
 
-
-
 <section class="relative my-8">
-    <img src="/HomeBanner.jpg" alt="main image" class="w-full h-auto rounded-xl" />
+    <img
+        src="/HomeBanner.jpg"
+        alt="main image"
+        class="w-full h-auto rounded-xl"
+    />
     <div class="absolute left-10 right-0 -bottom-10">
         <div
-            class="block max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow-lg"
+            class="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow-lg"
         >
-        <div class="flex gap-3">
-            {Object.values(TAGS).map((tag) => (  
-            
-                <img src={tag.logo} alt={tag.name}/>
-              
-              
-            ))}
-        </div>
-    
+            <div class="flex  gap-3">
+                {
+                    Object.values(TAGS).map((tag) => (
+                        <img src={tag.logo} alt={tag.name} />
+                    ))
+                }
+            </div>
 
             <h5
-                class="mb-2 text-3xl font-bold tracking-tight text-gray-900"
+                id="MainFont"
+                class="mb-2 text-4xl font-bold tracking-tight text-gray-900/100"
             >
                 InfoHeroes Blog
             </h5>
+
+            <hr >
         </div>
     </div>
 </section>

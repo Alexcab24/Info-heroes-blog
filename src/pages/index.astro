@@ -6,14 +6,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="InfoHeroes">
-	<main class="px-4">
+	<main class="px-4  lg:w-[1000px] mx-auto">
 		<SectionContainer class="pb-32" id="inicio">
 			<MainSection/>
 		</SectionContainer>
 
 		<SectionContainer>
-			<div class="mb-5">
-				<h1 class="text-xl font-semibold">SuperHeroes</h1>
+			
+			<div class="mb-10 relative">
+				
+				<h1 class="text-2xl font-bold">SuperHeroes</h1>
+				<hr class="absolute top-0 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-background-header to-transparent bg-center  "/>
 			</div>
 			
 			<HeroesSection/>
