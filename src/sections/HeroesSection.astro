@@ -10,9 +10,9 @@ let heroe = superheroes.sort()
     {
        heroe.map((hero) => (
         <div class="relative border border-gray-200 rounded-lg shadow bg-white">
-            <div class="p-3 ">
+            <div class="m-3 relative max-w-xs overflow-hidden bg-cover bg-no-repeat h-[170px] rounded-lg">
                 <a href="#">
-                <img class=" rounded-lg w-full h-[170px]" loading="lazy"  src={hero.image} alt="" />
+                <img class="object-cover object-top rounded-lg w-full h-[170px] transition duration-500 sm:h-full md:scale-110 md:hover:scale-105" loading="lazy"  src={hero.image} alt="" />
             </a>
                 </div>
            
