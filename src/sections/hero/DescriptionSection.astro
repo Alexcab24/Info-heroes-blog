@@ -1,0 +1,14 @@
+---
+const { heroes } = Astro.props;
+---
+
+
+<section class="relative md:w-[740px] bg-white mt-32 border-2 m-auto border-black animate-fade-in">
+<div class="absolute -top-16 left-12 bg-white ">
+    <span id="heroDescription" class={`text-8xl text-[${heroes.secondaryColor}]`}>Description</span>
+</div>
+<div class="m-8 text-xl">
+    <p>{heroes.description}</p>
+</div>
+
+</section>

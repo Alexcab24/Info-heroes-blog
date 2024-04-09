@@ -1,0 +1,31 @@
+---
+import SectionContainer from "../../components/SectionContainer.astro";
+import HeroMain from '../../sections/hero/HeroMain.astro'
+import DescriptionSection from '../../sections/hero/DescriptionSection.astro'
+import { superheroes } from "../../content/superHeroes";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+    
+  return superheroes.map((heroes) => ({
+    params: {
+        hero: heroes.slug
+    }
+  }))
+}
+
+const { hero: slug } = Astro.params;
+
+const heroes = superheroes.find((data) => data.slug === slug);
+
+---
+
+<Layout title="InfoHeroes">
+
+<SectionContainer>
+  <HeroMain heroes ={heroes}/>
+</SectionContainer>
+<SectionContainer>
+  <DescriptionSection heroes ={heroes}/>
+</SectionContainer>
+</Layout>

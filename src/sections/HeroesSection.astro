@@ -3,31 +3,40 @@ import {superheroes} from '../content/superHeroes.js'
 
 
 
-let heroe = superheroes.sort()
 ---
 
+
+
 <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center mx-10">
+    
     {
-       heroe.map((hero) => (
-        <div class="relative border border-gray-200 rounded-lg shadow bg-white">
-            <div class="m-3 relative max-w-xs overflow-hidden bg-cover bg-no-repeat h-[170px] rounded-lg">
-                <a href="#">
-                <img class="object-cover object-top rounded-lg w-full h-[170px] transition duration-500 sm:h-full md:scale-110 md:hover:scale-105" loading="lazy"  src={hero.image} alt="" />
-            </a>
-                </div>
-           
-            <div class="p-3">
-                <div class="flex flex-wrap gap-2">
-                    {hero.comic.map((tag) => (
-                        <img src={tag.logo} alt={tag.name} class={tag.class} />
-                    ))}
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{hero.name}</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700">{hero.firstApparence}</p>
-            </div>
-        </div>
-        ))
-    }
+        superheroes.map((hero) => (
+         <div class="relative  border-2 border-black shadow-2xl bg-white">
+             <div class="m-3 relative max-w-xs overflow-hidden bg-cover bg-no-repeat h-[170px] rounded-lg border-2 border-black ">
+                 <a href={`hero/${hero.slug}`}>
+                 <img class="object-cover object-top rounded-lg w-full h-[170px]  transition duration-500 sm:h-full md:scale-110 md:hover:scale-105 " loading="lazy"  src={hero.imageCard} alt="" />
+             </a>
+                 </div>
+            
+             <div class="p-3">
+                 <div class="flex flex-wrap gap-2 mx-2">
+                     {hero.comic.map((tag) => (
+                        <a href="#">
+                            <img src={tag.logo} alt={tag.name} class={tag.class} />
+                            </a>
+                       
+                     ))}
+                 </div>
+                     <h5 class="mb-2 mx-2 text-2xl font-bold tracking-tight text-gray-900">{hero.name}</h5>
+                 <hr class="m-2"/>
+                 <div class="flex flex-col bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:12px_12px] [mask-image:radial-gradient(ellipse_60%_75%_at_50%_50%,#000_70%,transparent_100%)]">
+
+                    <span class="m-3 font-normal text-gray-700">{hero.firstApparence}</span>
+                 <a href={`hero/${hero.slug}`} class="font-bold my-1 mx-3">Read more...</a>
+                    </div>
+                 
+             </div>
+         </div>
+         ))
+     }
 </section>
