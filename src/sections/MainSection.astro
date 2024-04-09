@@ -1,33 +1,27 @@
----
-import { TAGS } from "../content/superHeroes.js";
----
 
-<section class="relative my-8 animate-fade-in ">
+
+<section class="relative my-8  animate-fade-in ">
     <img
         src="/HomeBanner.jpg"
         alt="main image"
-        class="w-full h-auto rounded-xl"
+        class="w-full h-auto border-2 border-black"
     />
-    <div class="absolute left-10 right-0 -bottom-10">
+    <div class="absolute left-10 right-0 -bottom-5">
         <div
-            class="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow-lg animate-fade-in animate-duration-slower animate-delay-500"
+            class="relative block max-w-sm p-5 bg-white rounded-md border-2 border-black shadow-xl animate-slide-up-fade animate-duration-slower animate-delay-500"
         >
-            <div class="flex  gap-3">
-                {
-                    Object.values(TAGS).map((tag) => (
-                        <img src={tag.logo} alt={tag.name} />
-                    ))
-                }
-            </div>
-
+            
+        <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_3px,transparent_3px)] [background-size:24px_24px]"></div>
             <h5
                 id="MainFont"
                 class="mb-2 text-4xl font-bold tracking-tight text-gray-900/100"
             >
-                InfoHeroes Blog
+           <span class="text-5xl">"</span>  
+           ¡Discover the ulimited universe of <span class="text-marvel">superheroes</span>!    
+           <span class="text-5xl">"</span>
             </h5>
 
-            <hr >
+            <hr class="border-2">
         </div>
     </div>
 </section>

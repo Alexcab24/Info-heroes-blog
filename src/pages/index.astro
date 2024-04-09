@@ -1,26 +1,28 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
-import MainSection from "../sections/MainSection.astro"
-import HeroesSection from '../sections/HeroesSection.astro'
+import MainSection from "../sections/MainSection.astro";
+import HeroesSection from "../sections/HeroesSection.astro";
 import Layout from "../layouts/Layout.astro";
+
+
 ---
 
 <Layout title="InfoHeroes">
-	<main class="px-4  lg:w-[1000px] mx-auto">
+	<main class="px-4 lg:w-[1000px] mx-auto">
 		<SectionContainer class="pb-32 animate-fade-in" id="inicio">
-			<MainSection/>
+			<MainSection />
 		</SectionContainer>
 
 		<SectionContainer class="animate-fade-in">
-			
 			<div class="mb-10 relative">
-				
-				<h1 class="text-2xl font-bold">SuperHeroes</h1>
+				<h1  id="HeroesTitle" class="text-4xl font-bold m-4">SuperHeroes</h1>
 
-				<hr class="absolute  h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-background-header to-transparent bg-center  "/>
+				<hr
+					class="absolute h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-background-header to-transparent bg-center"
+				/>
 			</div>
-			
-			<HeroesSection/>
+
+			<HeroesSection />
 		</SectionContainer>
 	</main>
 </Layout>

@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'background-header': '#2874A6',
+				'background-header': '#5499C7 ',
 				'marvel': '#ec1d24',
 				'dc': '#004488',
 				'hover': '#2874A6 '
