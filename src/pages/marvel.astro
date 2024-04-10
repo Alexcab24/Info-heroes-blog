@@ -1,0 +1,22 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import MarvelMain from '../sections/MarvelMain.astro'
+import Layout from "../layouts/Layout.astro";
+
+import { superheroes } from "../content/superHeroes";
+import HeroesSection from "../sections/HeroesSection.astro";
+
+const marvelSuperheroes = superheroes.filter(marvel => marvel.publisher === 'Marvel Comics')
+---
+
+<Layout title="InfoHeroes">
+    <main class="px-4 lg:w-[1000px] mx-auto">
+        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+         <MarvelMain/>
+        </SectionContainer>
+
+        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+           <HeroesSection superheroes={marvelSuperheroes}/>
+           </SectionContainer>
+    </main>
+</Layout>

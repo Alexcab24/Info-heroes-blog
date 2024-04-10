@@ -1,14 +1,31 @@
 
+export const LINK = {
+    MARVEL: {
+      logo: '/Marvel.svg',
+      alt: 'MarvelLogo',
+      link: '/marvel',
+      sizeH: 'h-[70px]'
+    },
+    DC: {
+      logo: '/DC.svg',
+      alt: 'DCLogo',
+      link: '/dc',
+      sizeH: 'h-12'
+    },
+  };
 
 
 export const TAGS = {
     MARVEL: { 
       logo: '/Marvel.svg',
+      link: '/marvel',
       class: "-mb-5 -mt-10"
     },
     DC: {
       logo: '/DC.svg',
+      link: '/dc',
       class: "-mt-4"
+      
     },
   };
 
@@ -24,6 +41,9 @@ export const TAGS = {
         firstApparence: 'The Incredible Hulk #180',
         imageCard: '/Marvel/Wolverine.webp',
         imagePage: '/Marvel/heroPage/WolverinePage.webp',
+        image0: '/Marvel/heroPage/gallery/wolverine/wolverine1.webp',
+        image1: '/Marvel/heroPage/gallery/wolverine/wolverine2.webp',
+        image2: '/Marvel/heroPage/gallery/wolverine/wolverine3.webp',
         logo: '/Marvel/icon/wolverine.svg',
         primaryColor: '#FFD700',
         secondaryColor: '#0000FF',
@@ -39,6 +59,9 @@ export const TAGS = {
         firstApparence: 'Detective Comics #38',
         imageCard: '/DC/NightWing.webp',
         imagePage: '/DC/heroPage/dc-robin.webp',
+        image0: '/DC/heroPage/gallery/nightwing/nightwing1.webp',
+        image1: '/DC/heroPage/gallery/nightwing/nightwing2.webp',
+        image2: '/DC/heroPage/gallery/nightwing/nightwing3.webp',
         logo: '/DC/icon/robin.svg',
         primaryColor: '#00008B',
         comic: [TAGS.DC]
@@ -53,6 +76,9 @@ export const TAGS = {
         firstApparence: 'Captain America Comics #1',
         imageCard: '/Marvel/CaptainAmerica.webp',
         imagePage: '/Marvel/heroPage/marvel-captain.webp',
+        image0: '/Marvel/heroPage/gallery/captain-america/captain-america1.webp',
+        image1: '/Marvel/heroPage/gallery/captain-america/captain-america2.webp',
+        image2: '/Marvel/heroPage/gallery/captain-america/captain-america3.webp',
         logo: '/Marvel/icon/captainamerica.svg',
         primaryColor: '#FF0000',
         secondaryColor: '#0000FF',
@@ -96,6 +122,9 @@ export const TAGS = {
         firstApparence: 'Amazing Fantasy #15',
         imageCard: '/Marvel/SpiderMan.webp',
         imagePage: '/Marvel/heroPage/marvel-spider.webp',
+        image0: '/Marvel/heroPage/gallery/spiderman/spiderman1.webp',
+        image1: '/Marvel/heroPage/gallery/spiderman/spiderman2.webp',
+        image2: '/Marvel/heroPage/gallery/spiderman/spiderman3.webp',
         primaryColor: '#FF0000',
         secondaryColor: '#0000FF',
         logo: '/Marvel/icon/spiderman.svg',
@@ -192,3 +221,5 @@ export const TAGS = {
         comic: [TAGS.DC]
     },
 ];
+
+

@@ -4,6 +4,7 @@ import HeroMain from '../../sections/hero/HeroMain.astro'
 import DescriptionSection from '../../sections/hero/DescriptionSection.astro'
 import { superheroes } from "../../content/superHeroes";
 import Layout from "../../layouts/Layout.astro";
+import GallerySection from "../../sections/hero/GallerySection.astro";
 
 export function getStaticPaths() {
     
@@ -28,4 +29,7 @@ const heroes = superheroes.find((data) => data.slug === slug);
 <SectionContainer>
   <DescriptionSection heroes ={heroes}/>
 </SectionContainer>
+<SectionContainer>
+  <GallerySection heroes ={heroes}/>
+</SectioContainer>
 </Layout>

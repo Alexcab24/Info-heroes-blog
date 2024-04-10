@@ -1,24 +1,12 @@
 ---
-
-const LINK = {
-  MARVEL: {
-    logo: '/Marvel.svg',
-    alt: 'MarvelLogo',
-    sizeH: 'h-[70px]'
-  },
-  DC: {
-    logo: '/DC.svg',
-    alt: 'DCLogo',
-    sizeH: 'h-12'
-  },
-};
+import { LINK } from "../content/superHeroes";
 ---
 
 <nav
   class="mx-auto lg:w-[900px] w-full border-b-2 bg-background-header rounded-b-2xl animate-fade-in"
 >
   <div class="flex flex-wrap items-center justify-between px-4">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse hover:drop-shadow-xl">
       <span
         id="HeaderFont"
         class="self-center text-4xl whitespace-nowrap dark:text-white"
@@ -29,7 +17,7 @@ const LINK = {
       <ul class="flex justify-center space-x-8">
         {Object.values(LINK).map((link) => (
           <li  class="flex items-center">
-            <a href="#" class="block">
+            <a href={link.link} class="block">
               <img src={link.logo} alt={link.alt} class = {`${link.sizeH} hover:drop-shadow-xl`} />
             </a>
           </li>

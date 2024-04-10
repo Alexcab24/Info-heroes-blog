@@ -1,0 +1,22 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import DCMain from '../sections/DCMain.astro'
+import Layout from "../layouts/Layout.astro";
+
+import { superheroes } from "../content/superHeroes";
+import HeroesSection from "../sections/HeroesSection.astro";
+
+const dcSuperheroes = superheroes.filter(dc => dc.publisher === 'DC Comics')
+---
+
+<Layout title="InfoHeroes">
+    <main class="px-4 lg:w-[1000px] mx-auto">
+        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+         <DCMain/>
+        </SectionContainer>
+
+        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+           <HeroesSection superheroes={dcSuperheroes}/>
+           </SectionContainer>
+    </main>
+</Layout>

@@ -1,0 +1,16 @@
+---
+const { heroes } = Astro.props;
+---
+
+
+<section class="relative md:w-[740px] m-auto border-4 border-black">
+    <div class="grid grid-cols-2">
+        <div class="col-span-1 md:w-auto border-r-4 border-black">
+          <img src={heroes.image0} alt="Imagen 1" loading="lazy" class="h-full md:w-full">
+        </div>
+        <div class="col-span-1">
+            <img src={heroes.image1} alt="Imagen 2" loading="lazy" class="h-auto border-b-4 border-black">
+            <img src={heroes.image2} alt="Imagen 3" loading="lazy" class="h-auto">
+        </div>
+      </div>
+</section>

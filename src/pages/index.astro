@@ -3,7 +3,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import MainSection from "../sections/MainSection.astro";
 import HeroesSection from "../sections/HeroesSection.astro";
 import Layout from "../layouts/Layout.astro";
-
+import {superheroes} from '../content/superHeroes.js'
 
 ---
 
@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
 				/>
 			</div>
 
-			<HeroesSection />
+			<HeroesSection superheroes={superheroes} />
 		</SectionContainer>
 	</main>
 </Layout>
