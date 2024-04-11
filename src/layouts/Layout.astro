@@ -1,82 +1,111 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Header from '../components/Header.astro';
-import Footer from '../sections/Footer.astro'
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../sections/Footer.astro";
 // Supports weights 100-900
-import '@fontsource-variable/jost';
-import '@fontsource/bangers';
+import "@fontsource-variable/jost";
+import "@fontsource/bangers";
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<meta property="og:image" content="/og.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+
+		<meta
+			name="keywords"
+			content="
+		Superheroes
+        Marvel
+        DC Comics
+        Comic characters
+        Marvel Universe"
+		/>
+
+		<meta name="og:site_name" content="Info-heroes Blog" />
+		<meta property="og:type" content="website" />
+		<meta name="og:locale" content="en_US" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 		<ViewTransitions />
-	</head>
-	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script></head
+	>
+
 	<body class="relative">
-		<div class="fixed h-full w-full bg-white -z-10"><div class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div></div>
+		<div class="fixed h-full w-full bg-white -z-10">
+			<div
+				class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+			>
+			</div>
+		</div>
 		<!-- TAILWIND HACK -->
-		<div class="text-[#FF0000] text-[#FFD700] text-[#00008B] text-[#FF0000] text-[#00FF00] text-[#008000] text-[#0000FF] text-[#FFD700] text-[#C0C0C0] text-[#333333] text-[#0000FF] text-[#FFFF00] hidden"></div>
-		<Header/>
+		<div
+			class="text-[#FF0000] text-[#FFD700] text-[#00008B] text-[#FF0000] text-[#00FF00] text-[#008000] text-[#0000FF] text-[#FFD700] text-[#C0C0C0] text-[#333333] text-[#0000FF] text-[#FFFF00] hidden"
+		>
+		</div>
+		<Header />
 		<slot />
-		<Footer/>
+		<Footer />
+		<style is:global>
+			:root {
+				color-scheme: light;
+			}
+			#HeaderFont {
+				font-family: "Bangers", system-ui;
+			}
+			#MainFont {
+				font-family: "Bangers", system-ui;
+			}
+			#HeroesTitle {
+				font-family: "Bangers", system-ui;
+			}
+			#heroName {
+				font-family: "Bangers", system-ui;
+			}
+			#heroDescription {
+				font-family: "Bangers", system-ui;
+			}
+			body {
+				/* color: white; */
+				font-family: "Jost Variable", sans-serif;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				overscroll-behavior: none;
+			}
+
+			html {
+				font-family: "Onest Variable", system-ui, sans-serif;
+				scroll-behavior: smooth;
+				scrollbar-color: black white;
+			}
+			code {
+				font-family:
+					Menlo,
+					Monaco,
+					Lucida Console,
+					Liberation Mono,
+					DejaVu Sans Mono,
+					Bitstream Vera Sans Mono,
+					Courier New,
+					monospace;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	 :root {
-        color-scheme: light;
-      }
-	  #HeaderFont {
-		font-family: 'Bangers', system-ui;
-	}
-	#MainFont {
-		font-family: 'Bangers', system-ui;
-	}
-	#HeroesTitle {
-		font-family: 'Bangers', system-ui;
-	}
-	#heroName {
-		font-family: 'Bangers', system-ui;
-	}
-	#heroDescription {
-		font-family: 'Bangers', system-ui;
-	}
-	  body {
-        /* color: white; */
-		font-family: 'Jost Variable', sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-		/* background-image: url('/background.png');
-		background-size: 80px 80px; */
-      }
-	
-	  html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	
-</style>

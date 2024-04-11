@@ -2,27 +2,31 @@
 const { heroes } = Astro.props;
 ---
 
-<section class="relative md:w-[740px] bg-white mt-32 border-2 m-auto border-black animate-fade-in">
-
-    <div class="absolute -top-16 left-72 w-full">
+<section
+    class="relative md:w-[740px] bg-white  md:mt-32 mt-32 mx-3 border-2 md:m-auto border-black "
+>
+    <div class="absolute -top-12 md:-top-16  left-50 md:left-72 w-full">
         <span
             id="heroName"
-            class=`text-8xl text-[${heroes.primaryColor}] bg-white`
+            class=` text-6xl md:text-8xl text-[${heroes.primaryColor}] md:bg-white`
             >{heroes.name}</span
         >
     </div>
-    
-    <div class="flex">
-        <img
-            src={heroes.imagePage}
-            class="h-96 border-r-2 border-black"
-            alt={heroes.name}
-        />
+
+    <div class="grid md:flex" transition:name={`hero ${heroes.slug} box`}>
+        <picture>
+            <source srcset={heroes.imageCard} media="(max-width: 768px)">
+            <img
+                src={heroes.imagePage}
+                class="h-60 md:h-96 w-full"
+                alt={heroes.name}
+                transition:name={`hero ${heroes.slug} image`}
+            />
+        </picture>
         
-        <div class="my-16 mx-10">
-            
+
+        <div class="m-5 md:my-16 md:mx-10">
             <ul class="flex flex-col text-2xl gap-2">
-                
                 <span
                     ><span class="font-bold">Alter ego:</span>
                     {heroes.alterEgo}</span
@@ -38,10 +42,13 @@ const { heroes } = Astro.props;
                 >
             </ul>
         </div>
-        
+
         <div class="flex justify-end items-end m-6">
-            <img class="h-auto w-32 border-2 border-black" src={heroes.logo} alt={heroes.name} />
+            <img
+                class="h-auto w-32 border-2 border-black"
+                src={heroes.logo}
+                alt={heroes.name}
+            />
         </div>
-        
     </div>
 </section>

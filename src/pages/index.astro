@@ -7,13 +7,13 @@ import {superheroes} from '../content/superHeroes.js'
 
 ---
 
-<Layout title="InfoHeroes">
+<Layout title="InfoHeroes - Home" description="Discover the thrilling universe of Marvel and DC superheroes on our blog! From in-depth character analyses to breaking news and engaging discussions, dive into a world of limitless superpowers and action!">
 	<main class="px-4 lg:w-[1000px] mx-auto">
 		<SectionContainer class="pb-32 animate-fade-in" id="inicio">
 			<MainSection />
 		</SectionContainer>
 
-		<SectionContainer class="animate-fade-in">
+		<SectionContainer>
 			<div class="mb-10 relative">
 				<h1  id="HeroesTitle" class="text-4xl font-bold m-4">SuperHeroes</h1>
 
@@ -21,7 +21,6 @@ import {superheroes} from '../content/superHeroes.js'
 					class="absolute h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-background-header to-transparent bg-center"
 				/>
 			</div>
-
 			<HeroesSection superheroes={superheroes} />
 		</SectionContainer>
 	</main>

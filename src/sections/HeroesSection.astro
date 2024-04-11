@@ -1,5 +1,5 @@
 ---
-import { LINK } from "../content/superHeroes";
+
 
 const { superheroes } = Astro.props;
 ---
@@ -12,8 +12,8 @@ const { superheroes } = Astro.props;
         superheroes.map((hero) => (
          <div class="relative  border-2 border-black shadow-2xl bg-white">
              <div class="m-3 relative max-w-xs overflow-hidden bg-cover bg-no-repeat h-[170px] rounded-lg border-2 border-black ">
-                 <a href={`hero/${hero.slug}`}>
-                 <img class="object-cover object-top rounded-lg w-full h-[170px]  transition duration-500 sm:h-full md:scale-110 md:hover:scale-105 " loading="lazy"  src={hero.imageCard} alt="" />
+                 <a href={`/${hero.slug}`} transition:name={`hero ${hero.slug} box`}>
+                 <img class="object-cover object-top rounded-lg w-full h-[170px]  transition duration-500 sm:h-full md:scale-110 md:hover:scale-105 " loading="lazy"  src={hero.imageCard} alt={hero.name} transition:name={`hero ${hero.slug} image`}/>
              </a>
                  </div>
             
@@ -31,7 +31,7 @@ const { superheroes } = Astro.props;
                  <div class="flex flex-col bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:12px_12px] [mask-image:radial-gradient(ellipse_60%_75%_at_50%_50%,#000_70%,transparent_100%)]">
 
                     <span class="m-3 font-normal text-gray-700">{hero.firstApparence}</span>
-                 <a href={`hero/${hero.slug}`} class="font-bold my-1 mx-3">Read more...</a>
+                 <a href={`/${hero.slug}`} class="font-bold my-1 mx-3">Read more...</a>
                     </div>
                  
              </div>

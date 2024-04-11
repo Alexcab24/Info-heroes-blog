@@ -9,13 +9,13 @@ import HeroesSection from "../sections/HeroesSection.astro";
 const marvelSuperheroes = superheroes.filter(marvel => marvel.publisher === 'Marvel Comics')
 ---
 
-<Layout title="InfoHeroes">
+<Layout title="InfoHeroes - Marvel Comics" description = "Explore the captivating Marvel universe on our site. Dive into the adventures of iconic superheroes such as Spider-Man, Iron Man, and the Avengers, along with their epic battles, formidable villains, and the latest updates from the world of comics. Immerse yourself in Marvel's rich tapestry of storytelling and its influential impact on pop culture.">
     <main class="px-4 lg:w-[1000px] mx-auto">
-        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+        <SectionContainer class="pb-32" id="inicio">
          <MarvelMain/>
         </SectionContainer>
 
-        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+        <SectionContainer class="pb-32" id="inicio">
            <HeroesSection superheroes={marvelSuperheroes}/>
            </SectionContainer>
     </main>

@@ -9,13 +9,13 @@ import HeroesSection from "../sections/HeroesSection.astro";
 const dcSuperheroes = superheroes.filter(dc => dc.publisher === 'DC Comics')
 ---
 
-<Layout title="InfoHeroes">
+<Layout title="InfoHeroes - DC Comics" description="Discover the thrilling universe of DC Comics on our site. Explore legendary superheroes like Batman, Superman, and Wonder Woman, along with their exciting adventures, iconic villains, and the latest news from the comic book world. Immerse yourself in DC's rich history and enduring legacy in the entertainment world.">
     <main class="px-4 lg:w-[1000px] mx-auto">
         <SectionContainer class="pb-32 animate-fade-in" id="inicio">
          <DCMain/>
         </SectionContainer>
 
-        <SectionContainer class="pb-32 animate-fade-in" id="inicio">
+        <SectionContainer class="pb-32" id="inicio">
            <HeroesSection superheroes={dcSuperheroes}/>
            </SectionContainer>
     </main>
