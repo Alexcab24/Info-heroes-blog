@@ -1,6 +1,6 @@
 # InfoHeroes-Blog
 
-![InfoHeroes-Blog Logo](url_of_the_logo)
+![InfoHeroes-Blog Logo](https://i.ibb.co/s5sKnbb/og-copy.jpg)
 
 InfoHeroes-Blog is a web project dedicated to providing basic information about Marvel and DC superheroes in a comic-inspired design. Developed with Astro and Tailwind, it offers detailed character profiles with intuitive navigation.
 
